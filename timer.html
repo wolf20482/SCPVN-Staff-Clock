@@ -91,11 +91,11 @@
 
                 if (t.up) {
                     if (t.months >= 1) {
-                        document.getElementById("months").style.display = "visible";
+                        document.getElementById("months").style.display = "inline-block";
                         monthsSpan.innerHTML = ('0' + t.months).slice(-2);
                     }
                     if (t.years >= 1) {
-                        document.getElementById("years").style.display = "visible";
+                        document.getElementById("years").style.display = "inline-block";
                         yearsSpan.innerHTML = ('0' + t.years).slice(-2);
                     }
                     daysSpan.innerHTML = t.days;
@@ -110,13 +110,13 @@
                     if (type == "del") {
                         document.getElementById("topMessage").innerHTML = "Bài này đã đủ điều kiện xóa từ";
                         document.getElementById("topMessage").style.color = "green";
-                        document.getElementById("message").style.display = "visible";
+                        document.getElementById("message").style.display = "inline-block";
                         document.getElementById("message").innerHTML = "trước";
 
                     } else if (type == "ban") {
                         document.getElementById("topMessage").innerHTML = "Người dùng này đã đủ điều kiện xóa bỏ chặn từ"
                         document.getElementById("messsage").style.color = "green";
-                        document.getElementById("message").style.display = "visible";
+                        document.getElementById("message").style.display = "inline-block";
                         document.getElementById("message").innerHTML = "trước";
                     } else {
                         document.getElementById("topMessage").innerHTML = "Đồng hồ này đã hết hạn từ ";
