@@ -1,0 +1,117 @@
+body
+{
+    line-height: 1.6em;
+    font-family: verdana,arial,helvetica,sans-serif;
+}
+
+.tableBox h2{
+    margin: 5px 45px;
+    color: #b01;
+    border-bottom: solid 4px #999990;
+}
+
+.hor-minimalist-b
+{
+    
+    font-size: 12px;
+    background: #fff;
+    border-collapse: collapse;
+    text-align: left;
+}
+.hor-minimalist-b th
+{
+    font-size: 14px;
+    font-weight: normal;
+    color: #b01;
+    padding: 10px 8px;
+    border-bottom: 2px solid #999990;
+}
+.hor-minimalist-b td
+{
+    border-bottom: 1px solid #999990;
+    color: #b01;
+    padding: 6px 8px;
+}
+.hor-minimalist-b tbody tr:hover td
+{
+    color: #b01;
+}
+
+#code{
+    border: 1px #000 dashed;
+    background-color: #eee;
+    width: 600px;
+    padding: 5px;
+    margin: 20px 45px;
+}
+
+label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    font-size: 13px;  
+} 
+
+input[type=radio] {  
+    display: none;  
+}  
+
+label:before {  
+    content: "";  
+    display: inline-block;  
+
+    width: 16px;  
+    height: 16px;  
+
+    margin-right: 10px;  
+    position: absolute;  
+    left: 0;  
+    border-bottom: 1px;  
+    background-color: #f9f7f7;  
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+} 
+
+.radio label:before {  
+    border-radius: 8px;  
+} 
+
+input[type=radio]:checked + label:before {  
+    content: "\2022";  
+    color: #b01;  
+    font-size: 30px;  
+    text-align: center;  
+    line-height: 18px;  
+}  
+
+.displayblock{
+    background: #e5e6e8;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 5px;
+}
+
+.caption {
+    text-decoration: underline;
+    color: #b01;
+}
+
+.button {
+    background-color: #e5e6e8; /* Green */
+   
+    color: black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}

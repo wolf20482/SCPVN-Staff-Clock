@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>Tạo đồng hồ</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style/jquery.simple-dtpicker.css" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+    <body>
+        <h2>Đồng Hồ Đếm Ngược Tiếng Việt Cho Nhân Viên Wiki SCP-VN</h2>
+        <hr/>
+        <p id="results">
+        </p>
+        <div id="genericHolder">
+            <div class="displayblock" style="float: top;">
+                <div class="caption">
+                    Khi nào bắt đầu đếm ngược?
+                </div>
+                Tiêu đề: <input name="customTimerText" id="customTimerText" type="text" size="25" maxlength="150" value="Đồng hồ kết thúc sau">
+                <div class="radio">  
+                    <input id="genericYes" type="radio" name="noworlater" value="now"/>  
+                    <label for="genericYes">Bây giờ</label>  
+                    <input id="genericNo" type="radio" name="noworlater" value="later"/>  
+                    <label for="genericNo">Sau</label>  
+                </div> 
+            </div>
+            <div id="genericMidblock" class="displayblock" style=" display: none;
+                                                           visibility: hidden;">
+                <div class="caption">
+                    Ngày và giờ
+                </div>
+                <input type="text" id="genericdatepicker">
+                <div id="genericTime" style="display: inline-block">
+
+                    <select id="genericHours"style="width: 45%; display: inline-block">";
+
+                        <option >00</option>
+                        <option >01</option>
+                        <option >02</option>
+                        <option >03</option>
+                        <option >04</option>
+                        <option >05</option>
+                        <option >06</option>
+                        <option >07</option>
+                        <option >08</option>
+                        <option >09</option>
+                        <option >10</option>
+                        <option >11</option>
+                        <option >12</option>
+                        <option >13</option>
+                        <option >14</option>
+                        <option >15</option>
+                        <option >16</option>
+                        <option >17</option>
+                        <option >18</option>
+                        <option >19</option>
+                        <option >20</option>
+                        <option >21</option>
+                        <option >22</option>
+                        <option >23</option>
+                    </select>
+                    <select id="genericMinutes" style="width: 45%; display:inline-block">";
+                        <option >00</option>
+                        <option >01</option>
+                        <option >02</option>
+                        <option >03</option>
+                        <option >04</option>
+                        <option >05</option>
+                        <option >06</option>
+                        <option >07</option>
+                        <option >08</option>
+                        <option >09</option>
+                        <option >10</option>
+                        <option >11</option>
+                        <option >12</option>
+                        <option >13</option>
+                        <option >14</option>
+                        <option >15</option>
+                        <option >16</option>
+                        <option >17</option>
+                        <option >18</option>
+                        <option >19</option>
+                        <option >20</option>
+                        <option >21</option>
+                        <option >22</option>
+                        <option >23</option>
+                        <option >24</option>
+                        <option >25</option>
+                        <option >26</option>
+                        <option >27</option>
+                        <option >28</option>
+                        <option >29</option>
+                        <option >30</option>
+                        <option >31</option>
+                        <option >32</option>
+                        <option >33</option>
+                        <option >34</option>
+                        <option >35</option>
+                        <option >36</option>
+                        <option >37</option>
+                        <option >38</option>
+                        <option >39</option>
+                        <option >40</option>
+                        <option >41</option>
+                        <option >42</option>
+                        <option >43</option>
+                        <option >44</option>
+                        <option >45</option>
+                        <option >46</option>
+                        <option >47</option>
+                        <option >48</option>
+                        <option >49</option>
+                        <option >50</option>
+                        <option >51</option>
+                        <option >52</option>
+                        <option >53</option>
+                        <option >54</option>
+                        <option >55</option>
+                        <option >56</option>
+                        <option >57</option>
+                        <option >58</option>
+                        <option >59</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="displayblock" id="duration" style="float: top;">
+                <div class="caption">
+                    Thời gian
+                </div>
+                <div class="radio">  
+                    <input id="generic1hr" type="radio" name="duration" value="1h"/>  
+                    <label for="generic1hr">1h</label>  
+                    <input id="generic24hrs" type="radio" name="duration" value="24h"/>  
+                    <label for="generic24hrs">24h</label>  
+                    <input id="generic48hrs" type="radio" name="duration" value="48h"/>  
+                    <label for="generic48hrs">48h</label>  
+                    <input id="generic72hrs" type="radio" name="duration" value="72h"/>  
+                    <label for="generic72hrs">72h</label>  
+                    <input id="generic1wk" type="radio" name="duration" value="1wk"/>  
+                    <label for="generic1wk">1 tuần</label>  
+                    <input id="genericcustom" type="radio" name="duration" value="custom"/>  
+                    <label for="genericcustom">Khác</label>  
+                </div> 
+            </div>
+
+            <div id="genericEndblock" class="displayblock" style=" display: none;
+                                                           visibility: hidden;">
+                <div class="caption">
+                    Khi nào kết thúc đếm ngược?
+                </div>
+                <input type="text" id="genericcustomamount" style="width: 40%; display:inline-block">
+
+
+                <select id="genericdurationtype"style="width: 30%; display: inline-block">";
+                    <option value="hours">Giờ</option>
+                    <option value="days">Ngày</option>
+                    <option value="weeks">Tuần</option>
+                    <option value="months">Tháng</option>
+                    <option value="years">Năm</option>
+
+                </select>
+
+
+            </div>
+            <div id="displayblock">
+                <button type="button" class="button" id="genericsubmit">Tạo Đồng Hồ</button>
+            </div>
+            <p id="genericcode"></p>
+        </div>
+
+
+        <script type="text/javascript">
+
+            $(document).on('click', '#genericsubmit', function(){
+                var startTime = Date.now();
+
+                if(document.getElementById('genericNo').checked ){
+                    if(document.getElementById('genericdatepicker').value != "" ){
+                        startTime = Date.parse($("#genericdatepicker").val());
+                        startTime = startTime + (60 * 60 * 1000 * parseInt($("#hours").val()));
+                        startTime = startTime + (60 * 1000 * parseInt($("#minutes").val()));
+                    }
+                }
+
+                var endTime = startTime;
+
+                if(document.getElementById('generic1hr').checked){
+                    endTime = endTime + (60 * 60 * 1000);
+                }else if(document.getElementById('generic24hrs').checked){
+                    endTime = endTime + (60 * 60 * 1000 * 24)
+                }else if(document.getElementById('generic48hrs').checked){
+                    endTime = endTime + (60 * 60 * 1000 * 48)
+                }else if(document.getElementById('generic72hrs').checked){
+                    endTime = endTime + (60 * 60 * 1000 * 72)
+                }else if(document.getElementById('generic1wk').checked){
+                    endTime = endTime + (60 * 60 * 1000 * 24 * 7)
+                }else if(document.getElementById('genericcustom').checked){
+                    var durationtype = $("#genericdurationtype").val();
+                    if(durationtype == 'hours'){
+                        endTime = endTime + (60 * 60 * 1000 * parseInt($("#genericcustomamount").val()))
+                    }else if (durationtype == 'days'){
+                        endTime = endTime + (60 * 60 * 1000 * 24 * parseInt($("#genericcustomamount").val()))
+                    }else if (durationtype == 'weeks'){
+                        endTime = endTime + (60 * 60 * 1000 * 24 * 7 * parseInt($("#genericcustomamount").val()))
+                    }else if (durationtype == 'months'){
+                        endTime = endTime + (60 * 60 * 1000 * 24 * 30 * parseInt($("#genericcustomamount").val()))
+                    }else if (durationtype == 'years'){
+                        endTime = endTime + (60 * 60 * 24 * 365 *  1000 * parseInt($("#genericcustomamount").val()))
+                    }
+                }
+
+
+
+
+
+
+
+
+                var code = "<p><strong>Thêm code sau vào chỗ nào cần có đồng hồ:</strong></p><p>" +
+                    "<i>[[iframe https://scpvntimer.fly.dev/timer.html?time="
+                    + parseFloat(startTime + (endTime - startTime))  +"&amp;type="+encodeURI($('#customTimerText').val())+
+                    " style=\"width: 500px; height: 250px; border: 0;\"]]</i></p>"
+
+//console.log(code);
+                $('#genericcode').html(code);
+
+            });
+
+            $('#1hr, #24hrs, #48hrs, #72hrs, #1wk').on('click', function(){
+                document.getElementById("endblock").style.display = 'none';
+                document.getElementById("endblock").style.visibility = 'hidden';
+            });
+            
+             document.getElementById("genericNo").onclick = function(){
+                document.getElementById("genericMidblock").style.display = 'inline-block';
+                document.getElementById("genericMidblock").style.visibility = 'visible';
+            }
+
+            document.getElementById("genericYes").onclick = function(){
+                document.getElementById("genericMidblock").style.display = 'none';
+                document.getElementById("genericMidblock").style.visibility = 'hidden';
+            }
+
+            document.getElementById("genericcustom").onclick = function(){
+                document.getElementById("genericEndblock").style.display = 'inline-block';
+                document.getElementById("genericEndblock").style.visibility = 'visible';
+            }
+
+            $('#1hr, #24hrs, #48hrs, #72hrs, #1wk').on('click', function(){
+                document.getElementById("genericEndblock").style.display = 'none';
+                document.getElementById("genericEndblock").style.visibility = 'hidden';
+            });
+
+            $( function() {
+                $( "#genericdatepicker" ).datepicker();
+            } );
+        </script>
+    </body>
+</html>
