@@ -12,11 +12,11 @@
     <div class="displayblock">
         <h1 id="topMessage"></h1>
         <div id="clockdiv">
-            <div id="years" style="display: none">
+            <div id="years" style="visibility: hidden; display: none">
                 <span class="years"></span>
                 <div class="smalltext">Năm</div>
             </div>
-            <div id="months" style="display: none">
+            <div id="months" style="visibility: hidden; display: none">
                 <span class="months"></span>
                 <div class="smalltext">Tháng</div>
             </div>
@@ -91,11 +91,13 @@
 
                 if (t.up) {
                     if (t.months >= 1) {
-                        document.getElementById("months").style.display = "inline-block";
+                        document.getElementById("months").style.visibility = "visible";
+                        document.getElementById("months").style.display = "initial";
                         monthsSpan.innerHTML = ('0' + t.months).slice(-2);
                     }
                     if (t.years >= 1) {
-                        document.getElementById("years").style.display = "inline-block";
+                        document.getElementById("years").style.visibility = "visible";
+                        document.getElementById("years").style.display = "initial";
                         yearsSpan.innerHTML = ('0' + t.years).slice(-2);
                     }
                     daysSpan.innerHTML = t.days;
@@ -110,18 +112,21 @@
                     if (type == "del") {
                         document.getElementById("topMessage").innerHTML = "Bài này đã đủ điều kiện xóa từ";
                         document.getElementById("topMessage").style.color = "green";
-                        document.getElementById("message").style.display = "inline-block";
+                        document.getElementById("message").style.visibility = "visible";
+                        document.getElementById("message").style.display = "initial";
                         document.getElementById("message").innerHTML = "trước";
 
                     } else if (type == "ban") {
                         document.getElementById("topMessage").innerHTML = "Người dùng này đã đủ điều kiện xóa bỏ chặn từ"
                         document.getElementById("messsage").style.color = "green";
-                        document.getElementById("message").style.display = "inline-block";
+                        document.getElementById("message").style.visibility = "visible";
+                        document.getElementById("message").style.display = "initial";
                         document.getElementById("message").innerHTML = "trước";
                     } else {
                         document.getElementById("topMessage").innerHTML = "Đồng hồ này đã hết hạn từ ";
                         document.getElementById("messsage").style.color = "green";
-                        document.getElementById("message").style.display = "none";
+                        document.getElementById("message").style.visibility = "visible";
+                        document.getElementById("message").style.display = "initial";
                     }
                 } else {
                     daysSpan.innerHTML = t.days;
