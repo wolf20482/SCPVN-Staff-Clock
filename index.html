@@ -188,7 +188,7 @@
         $(document).on('click', '#deletionsubmit', function () {
             var reasonPrompt = prompt("Tại sao bài này cần bị xóa?");
             var letterNumber = /^[0-9a-zA-Z]+$/;
-            if (!reasonPrompt || !reasonPrompt.value.match(letterNumber)) {
+            if (!reasonPrompt) {
                 reason = "Hãy điền lý do xóa bài"
             } else {
                 reason = `Thực hiện xóa bài vì lý do ${reasonPrompt}`;
