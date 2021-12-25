@@ -171,6 +171,7 @@
                 <button type="button" class="button" id="genericsubmit">Tạo Đồng Hồ</button>
             </div>
             <p id="genericcode"></p>
+            <p id="preview"></p>
         </div>
 
 
@@ -228,6 +229,7 @@
 
 //console.log(code);
                 $('#genericcode').html(code);
+                document.getElementById("preview").innerHTML = "<p><strong>Xem trước:</strong><br /></p><iframe src=\"https://wolf20482.github.io/SCPVN-Staff-Clock/timer.html?time=" + parseFloat(startTime + (endTime - startTime)) + "&type=" + encodeURI($('#customTimerText').val()) + "\" style=\"border:none;\" height=\"250\" width=\"500\"></iframe>"
 
             });
 
