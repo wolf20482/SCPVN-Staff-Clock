@@ -183,15 +183,12 @@
     <script type="text/javascript">
 
         $(document).on('click', '#deletionsubmit', function () {
-            var startTime = Date.now();
-
-            var endTime = endTime + (60 * 60 * 1000 * 24);
-
-            var code = "<p><strong>Tiêu đề bình luận:</strong><br><br><i>Post QTV - Xóa Bài</i></p><p><strong>Nội dung bình luận:</strong></p><p><i>Bắt đầu biểu quyết xóa bài khi rating xuống dưới -5.</i></p><p><i>[[iframe https://wolf20482.github.io/SCPVN-Staff-Clock/timer.html?time=" + (new Date().getTime() + 86400000)  +"&amp;type=" + encodeURI("Bài này sẽ bị xóa trong") + " style=\"width: 500px; height: 250px; border: 0;\"]]</i></p><p><i>**Nếu bạn không phải là tác giả và bạn muốn viết lại bài này, bạn có thể trả lời lại post này để xin phép làm vậy. Hãy xin phép tác giả và chắc chắn rằng bạn sao chép mã nguồn trang vào sandbox. __Không__ trả lời post này với bất kì lý do nào khác trừ khi bạn là nhân viên.**</i></p>"
+            var time = new Date().getTime() + 86400000;
+            var code = "<p><strong>Tiêu đề bình luận:</strong><br><br><i>Post QTV - Xóa Bài</i></p><p><strong>Nội dung bình luận:</strong></p><p><i>Bắt đầu biểu quyết xóa bài khi rating xuống dưới -5.</i></p><p><i>[[iframe https://wolf20482.github.io/SCPVN-Staff-Clock/timer.html?time=" + time  +"&amp;type=" + encodeURI("Bài này sẽ bị xóa trong") + " style=\"width: 500px; height: 250px; border: 0;\"]]</i></p><p><i>**Nếu bạn không phải là tác giả và bạn muốn viết lại bài này, bạn có thể trả lời lại post này để xin phép làm vậy. Hãy xin phép tác giả và chắc chắn rằng bạn sao chép mã nguồn trang vào sandbox. __Không__ trả lời post này với bất kì lý do nào khác trừ khi bạn là nhân viên.**</i></p>"
 
             //console.log(code);
             $('#genericcode').html(code);
-            document.getElementById("preview").innerHTML = "<p><strong>Xem trước:</strong><br /></p><iframe src=\"https://wolf20482.github.io/SCPVN-Staff-Clock/timer.html?time=" + (new Date().getTime() + 86400000)  +"&type=" + encodeURI("Bài này sẽ bị xóa trong") + "\" style=\"border:none;\" height=\"250\" width=\"500\"></iframe>"
+            document.getElementById("preview").innerHTML = "<p><strong>Xem trước:</strong><br /></p><iframe src=\"https://wolf20482.github.io/SCPVN-Staff-Clock/timer.html?time=" + time  +"&type=" + encodeURI("Bài này sẽ bị xóa trong") + "\" style=\"border:none;\" height=\"250\" width=\"500\"></iframe>"
 
         });
 
